@@ -8,7 +8,7 @@ using System.Web;
 
 namespace DatabaseActivities.Models
 {
-    public class ApplicationDbContext:DbContext
+    public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext() : base("DefaultConnection")
         {
@@ -25,5 +25,6 @@ namespace DatabaseActivities.Models
             base.OnModelCreating(modelBuilder);
         }
         public DbSet<Base> Base { get; set; }
+        public DbSet<PoundToKilo> PoundsToKilos { get; set; }
     }
 }
