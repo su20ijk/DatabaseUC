@@ -1,0 +1,30 @@
+﻿@using DatabaseActivities.Models.Entity
+@model List<PoundToKilo>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div>
+    @Html.ActionLink("Create", "Create", "PoundToKilo") <br />
+    @Html.ActionLink("Edit", "Edit", "PoundToKilo") <br />
+    @Html.ActionLink("Delete", "Delete", "PoundToKilo") <br />
+</div>
+<table class="table">
+    <thred>
+        <tr>
+            <td>Id</td>
+            <td>Pounds</td>
+            <td>Kilograms</td>
+        </tr>
+    </thred>
+    @foreach (PoundToKilo conversion in Model)
+    {
+        <tr>
+            <td>@conversion.Id</td>
+            <td>@conversion.Pounds</td>
+            <td>@conversion.Kilograms</td>
+        </tr>
+    }
+</table>
+
