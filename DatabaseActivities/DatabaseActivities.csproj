@@ -155,6 +155,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Entity\Base.cs" />
+    <Compile Include="Models\Entity\HorsetoBlock.cs" />
     <Compile Include="Models\Entity\PoundToKilo.cs" />
     <Compile Include="Models\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
