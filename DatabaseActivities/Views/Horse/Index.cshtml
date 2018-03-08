@@ -1,0 +1,28 @@
+﻿@using DatabaseActivities.Models.Entity
+@model List<HorsetoBlock>
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Index</h2>
+<div>
+    @Html.ActionLink("Create", "Create", "Horse") <br />
+    @Html.ActionLink("Edit", "Edit", "Horse") <br />
+    @Html.ActionLink("Delete", "Delete", "Horse") <br />
+</div>
+<table class="table">
+    <thred>
+        <tr>
+            <td>Id</td>
+            <td>Horses</td>
+            <td>Blocks</td>
+        </tr>
+    </thred>
+    @foreach (HorsetoBlock conversion in Model)
+    {
+        <tr>
+            <td>@conversion.Id</td>
+            <td>@conversion.Horses</td>
+            <td>@conversion.Blocks</td>
+        </tr>
+    }
+</table>
