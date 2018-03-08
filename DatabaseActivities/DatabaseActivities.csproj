@@ -152,6 +152,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803080145292_HorsetoBlock.cs" />
+    <Compile Include="Migrations\201803080145292_HorsetoBlock.Designer.cs">
+      <DependentUpon>201803080145292_HorsetoBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803080146443_Base.cs" />
+    <Compile Include="Migrations\201803080146443_Base.Designer.cs">
+      <DependentUpon>201803080146443_Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803080148250_PoundToKilo.cs" />
+    <Compile Include="Migrations\201803080148250_PoundToKilo.Designer.cs">
+      <DependentUpon>201803080148250_PoundToKilo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Entity\Base.cs" />
@@ -213,6 +225,17 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803080145292_HorsetoBlock.resx">
+      <DependentUpon>201803080145292_HorsetoBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803080146443_Base.resx">
+      <DependentUpon>201803080146443_Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803080148250_PoundToKilo.resx">
+      <DependentUpon>201803080148250_PoundToKilo.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
