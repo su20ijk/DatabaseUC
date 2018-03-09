@@ -5,3 +5,25 @@
 
 <h2>Index</h2>
 
+<div>
+    @Html.ActionLink("Create", "Create", "MeterstoFeet") <br />
+    @Html.ActionLink("Edit", "Edit", "MeterstoFeet") <br />
+    @Html.ActionLink("Delete", "Delete", "MeterstoFeet") <br />
+</div>
+<table class="table">
+    <thred>
+        <tr>
+            <td>Id</td>
+            <td>Meters</td>
+            <td>Feet</td>
+        </tr>
+    </thred>
+    @foreach (MeterstoFeet conversion in Model)
+    {
+        <tr>
+            <td>@conversion.Id</td>
+            <td>@conversion.Pounds</td>
+            <td>@conversion.Kilograms</td>
+        </tr>
+    }
+</table>

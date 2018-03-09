@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DatabaseActivities.Models.Entity;
+using DatabaseActivities.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +10,41 @@ namespace DatabaseActivities.Controllers
 {
     public class MeterstoFeetController : Controller
     {
+        private MeterstoFeetService service = new MeterstoFeetService();
         // GET: MeterstoFeet
         public ActionResult Index()
         {
+            return View(service.GetAllConversions());
+        }
+        public ActionResult Create()
+        {
             return View();
+        }
+        [HttpPost]
+        public ActionResult CreateConversion(double Meters)
+        {
+            service.CreateConversions(Meters);
+            return RedirectToAction("Index", "MeterstoFeet");
+        }
+        public ActionResult Edit()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult EditConversion(MeterstoFeet toSave)
+        {
+            service.SaveEdits(toSave);
+            return RedirectToAction("Index", "MeterstoFeet");
+        }
+        public ActionResult Delete()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult DeleteConversion(int Id)
+        {
+            service.DeleteConversion(Id);
+            return RedirectToAction("Index", "MeterstoFeet");
         }
     }
 }

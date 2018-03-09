@@ -14,6 +14,28 @@ namespace DatabaseActivities.Repository
         {
             context = new ApplicationDbContext();
         }
-        
+
+        public List<MeterstoFeet> GetAllConversions()
+        {
+            return context.MeterstoFeet.toList();
+        }
+
+        public void CreateConversion(MeterstoFeet toAdd)
+        {
+            context.MeterstoFeet.Add(toAdd);
+            context.SaveChanges();
+        }
+
+        public void DeleteConversion(int Id)
+        {
+            context.MeterstoFeet.Remove(context.MeterstoFeet.Find(Id));
+            context.SaveChanges();
+        }
+
+        public void SaveEdit(MeterstoFeet toSave)
+        {
+            context.Entry(toSave).State = EntityState.Modified;
+            context.SaveChanges();
+        }
     }
 }

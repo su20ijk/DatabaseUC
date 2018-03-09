@@ -14,5 +14,27 @@ namespace DatabaseActivities.Service
         {
             repository = new MeterstoFeetRepo();
         }
+
+        public List<MeterstoFeet> GetAllConversions()
+        {
+            return repository.GetAllConversions();
+        }
+
+        public void CreateConversions(double Meters)
+        {
+            Double Feet = Meters * 3.21;
+            MeterstoFeet x = new MeterstoFeet();
+            x.Meters = Meters;
+            x.Feet = Feet;
+            repository.CreateConversion(x);
+        }
+        public void DeleteConversion(int Id)
+        {
+            repository.DeleteConversion(Id);
+        }
+        public void SaveEdits(MeterstoFeet toSave)
+        {
+            repository.SaveEdit(toSave);
+        }
     }
 }
