@@ -37,6 +37,17 @@ namespace DatabaseActivities.Migrations
                         Kilograms = c.Double(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
+            CreateTable("dbo.MeterstoFeet", c => new
+            {
+                Id = c.Int(nullable: false, identity: true),
+                Meters = c.Double(nullable: false),
+                Feet = c.Double(nullable: false),
+            })
+            .PrimaryKey(t => t.Id);
+
+            
+                
+                
             
         }
         
@@ -45,6 +56,7 @@ namespace DatabaseActivities.Migrations
             DropTable("dbo.PoundToKiloes");
             DropTable("dbo.HorsetoBlocks");
             DropTable("dbo.Bases");
+            DropTable("dbo.MeterstoFeet");
         }
     }
 }
