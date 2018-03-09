@@ -8,8 +8,8 @@ namespace DatabaseActivities.Models.Entity
     public class MeterstoFeet
     {
         public int Id { get; set; }
-        public int Meters { get; set; }
-        public int Feet { get; set; }
+        public double Meters { get; set; }
+        public double Feet { get; set; }
         
 
     }

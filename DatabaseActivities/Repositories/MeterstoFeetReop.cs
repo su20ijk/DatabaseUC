@@ -17,7 +17,7 @@ namespace DatabaseActivities.Repository
 
         public List<MeterstoFeet> GetAllConversions()
         {
-            return context.MeterstoFeet.toList();
+            return context.MeterstoFeet.ToList();
         }
 
         public void CreateConversion(MeterstoFeet toAdd)
