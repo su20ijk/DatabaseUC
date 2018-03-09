@@ -27,5 +27,6 @@ namespace DatabaseActivities.Models
         public DbSet<Base> Base { get; set; }
         public DbSet<PoundToKilo> PoundsToKilos { get; set; }
         public DbSet<HorsetoBlock> HorsestoBlocks { get; set; }
+       // public DbSet<MeterstoFeet> MetertoFoot { get; set; }
     }
 }

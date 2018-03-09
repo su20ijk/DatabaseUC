@@ -151,6 +151,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HorseController.cs" />
+    <Compile Include="Controllers\MetertoFootController.cs" />
     <Compile Include="Controllers\PoundToKiloController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -229,6 +230,8 @@
     <Content Include="Views\Horse\Edit.cshtml" />
     <Content Include="Views\Horse\Delete.cshtml" />
     <Content Include="Views\Horse\Create.cshtml" />
+    <Content Include="Views\MetertoFoot\Create.cshtml" />
+    <Content Include="Views\MetertoFoot\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
