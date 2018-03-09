@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace DatabaseActivities.Controllers
 {
-    public class MeterstoFeetController : Controller
+    public class MetertoFootController : Controller
     {
         private MeterstoFeetService service = new MeterstoFeetService();
         // GET: MeterstoFeet
@@ -24,7 +24,7 @@ namespace DatabaseActivities.Controllers
         public ActionResult CreateConversion(double Meters)
         {
             service.CreateConversions(Meters);
-            return RedirectToAction("Index", "MeterstoFeet");
+            return RedirectToAction("Index", "MetertoFoot");
         }
         public ActionResult Edit()
         {
@@ -34,7 +34,7 @@ namespace DatabaseActivities.Controllers
         public ActionResult EditConversion(MeterToFoot toSave)
         {
             service.SaveEdits(toSave);
-            return RedirectToAction("Index", "MeterstoFeet");
+            return RedirectToAction("Index", "MetertoFoot");
         }
         public ActionResult Delete()
         {
@@ -44,7 +44,7 @@ namespace DatabaseActivities.Controllers
         public ActionResult DeleteConversion(int Id)
         {
             service.DeleteConversion(Id);
-            return RedirectToAction("Index", "MeterstoFeet");
+            return RedirectToAction("Index", "MetertoFoot");
         }
     }
 }
