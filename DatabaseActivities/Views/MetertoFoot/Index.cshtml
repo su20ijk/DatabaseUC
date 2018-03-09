@@ -1,0 +1,30 @@
+﻿@using DatabaseActivities.Models.Entity
+@model List<MeterToFoot>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    @Html.ActionLink("Create", "Create", "MetertoFoot") <br />
+    @Html.ActionLink("Edit", "Edit", "MetertoFoot") <br />
+    @Html.ActionLink("Delete", "Delete", "MetertoFoot") <br />
+</div>
+<table class="table">
+    <thred>
+        <tr>
+            <td>Id</td>
+            <td>Meters</td>
+            <td>Feet</td>
+        </tr>
+    </thred>
+    @foreach (MeterToFoot conversion in Model)
+    {
+        <tr>
+            <td>@conversion.Id</td>
+            <td>@conversion.Meters</td>
+            <td>@conversion.Feet</td>
+        </tr>
+    }
+</table>

@@ -151,6 +151,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HorseController.cs" />
+    <Compile Include="Controllers\MetertoFootController.cs" />
     <Compile Include="Controllers\PoundToKiloController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -167,16 +168,23 @@
     <Compile Include="Migrations\201803080148250_PoundToKilo.Designer.cs">
       <DependentUpon>201803080148250_PoundToKilo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803091630462_MetertoFoot.cs" />
+    <Compile Include="Migrations\201803091630462_MetertoFoot.Designer.cs">
+      <DependentUpon>201803091630462_MetertoFoot.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Entity\MetertoFoot.cs" />
     <Compile Include="Models\Entity\Base.cs" />
     <Compile Include="Models\Entity\HorsetoBlock.cs" />
     <Compile Include="Models\Entity\PoundToKilo.cs" />
     <Compile Include="Models\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\MeterstoFeetRepo.cs" />
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\HorseRepository.cs" />
     <Compile Include="Repositories\PoundToKiloRepository.cs" />
+    <Compile Include="Service\MeterstoFeetService.cs" />
     <Compile Include="Service\BaseService.cs" />
     <Compile Include="Service\HorseService.cs" />
     <Compile Include="Service\PoundToKiloService.cs" />
@@ -229,6 +237,10 @@
     <Content Include="Views\Horse\Edit.cshtml" />
     <Content Include="Views\Horse\Delete.cshtml" />
     <Content Include="Views\Horse\Create.cshtml" />
+    <Content Include="Views\MetertoFoot\Create.cshtml" />
+    <Content Include="Views\MetertoFoot\Delete.cshtml" />
+    <Content Include="Views\MetertoFoot\Edit.cshtml" />
+    <Content Include="Views\MetertoFoot\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -255,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803080148250_PoundToKilo.resx">
       <DependentUpon>201803080148250_PoundToKilo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803091630462_MetertoFoot.resx">
+      <DependentUpon>201803091630462_MetertoFoot.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
