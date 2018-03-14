@@ -1,0 +1,28 @@
+﻿@using DatabaseActivities.Models.Entity
+@model List<GramToOunce>
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Index</h2>
+<div>
+    @Html.ActionLink("Create", "Create", "Gram to Ounce") <br />
+    @Html.ActionLink("Edit", "Edit", "Gram to Ounce") <br />
+    @Html.ActionLink("Delete", "Delete", "Gram to Ounce") <br />
+</div>
+<table class="table">
+    <thred>
+        <tr>
+            <td>Id</td>
+            <td>Grams</td>
+            <td>Ounces</td>
+        </tr>
+    </thred>
+    @foreach (GramToOunce conversion in Model)
+    {
+        <tr>
+            <td>@conversion.Id</td>
+            <td>@conversion.Grams</td>
+            <td>@conversion.Ounes</td>
+        </tr>
+    }
+</table>
