@@ -161,21 +161,9 @@
     <Compile Include="Migrations\201803080145292_HorsetoBlock.Designer.cs">
       <DependentUpon>201803080145292_HorsetoBlock.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201803080146443_Base.cs" />
-    <Compile Include="Migrations\201803080146443_Base.Designer.cs">
-      <DependentUpon>201803080146443_Base.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803080148250_PoundToKilo.cs" />
-    <Compile Include="Migrations\201803080148250_PoundToKilo.Designer.cs">
-      <DependentUpon>201803080148250_PoundToKilo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803091630462_MetertoFoot.cs" />
-    <Compile Include="Migrations\201803091630462_MetertoFoot.Designer.cs">
-      <DependentUpon>201803091630462_MetertoFoot.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803151503428_GramToOunce.cs" />
-    <Compile Include="Migrations\201803151503428_GramToOunce.Designer.cs">
-      <DependentUpon>201803151503428_GramToOunce.cs</DependentUpon>
+    <Compile Include="Migrations\201803161603423_GramToOunce.cs" />
+    <Compile Include="Migrations\201803161603423_GramToOunce.Designer.cs">
+      <DependentUpon>201803161603423_GramToOunce.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -272,17 +260,8 @@
     <EmbeddedResource Include="Migrations\201803080145292_HorsetoBlock.resx">
       <DependentUpon>201803080145292_HorsetoBlock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803080146443_Base.resx">
-      <DependentUpon>201803080146443_Base.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803080148250_PoundToKilo.resx">
-      <DependentUpon>201803080148250_PoundToKilo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803091630462_MetertoFoot.resx">
-      <DependentUpon>201803091630462_MetertoFoot.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803151503428_GramToOunce.resx">
-      <DependentUpon>201803151503428_GramToOunce.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803161603423_GramToOunce.resx">
+      <DependentUpon>201803161603423_GramToOunce.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

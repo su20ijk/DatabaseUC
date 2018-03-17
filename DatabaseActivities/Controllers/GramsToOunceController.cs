@@ -15,7 +15,7 @@ namespace DatabaseActivities.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            return View(service.GetAllConversions());
         }
 
         public ActionResult Create()
