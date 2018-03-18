@@ -7,13 +7,13 @@ namespace DatabaseActivities.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class MetertoFoot : IMigrationMetadata
+    public sealed partial class GramToOunce : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(MetertoFoot));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(GramToOunce));
         
         string IMigrationMetadata.Id
         {
-            get { return "201803091630462_MetertoFoot"; }
+            get { return "201803161603423_GramToOunce"; }
         }
         
         string IMigrationMetadata.Source

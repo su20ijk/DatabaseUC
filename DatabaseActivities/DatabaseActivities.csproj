@@ -149,6 +149,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\GramsToOunceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HorseController.cs" />
     <Compile Include="Controllers\MetertoFootController.cs" />
@@ -160,30 +161,25 @@
     <Compile Include="Migrations\201803080145292_HorsetoBlock.Designer.cs">
       <DependentUpon>201803080145292_HorsetoBlock.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201803080146443_Base.cs" />
-    <Compile Include="Migrations\201803080146443_Base.Designer.cs">
-      <DependentUpon>201803080146443_Base.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803080148250_PoundToKilo.cs" />
-    <Compile Include="Migrations\201803080148250_PoundToKilo.Designer.cs">
-      <DependentUpon>201803080148250_PoundToKilo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803091630462_MetertoFoot.cs" />
-    <Compile Include="Migrations\201803091630462_MetertoFoot.Designer.cs">
-      <DependentUpon>201803091630462_MetertoFoot.cs</DependentUpon>
+    <Compile Include="Migrations\201803161603423_GramToOunce.cs" />
+    <Compile Include="Migrations\201803161603423_GramToOunce.Designer.cs">
+      <DependentUpon>201803161603423_GramToOunce.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Entity\GramToOunce.cs" />
     <Compile Include="Models\Entity\MetertoFoot.cs" />
     <Compile Include="Models\Entity\Base.cs" />
     <Compile Include="Models\Entity\HorsetoBlock.cs" />
     <Compile Include="Models\Entity\PoundToKilo.cs" />
     <Compile Include="Models\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\GramsToOunceRepository.cs" />
     <Compile Include="Repositories\MeterstoFeetRepo.cs" />
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\HorseRepository.cs" />
     <Compile Include="Repositories\PoundToKiloRepository.cs" />
+    <Compile Include="Service\GramsToOunceService.cs" />
     <Compile Include="Service\MeterstoFeetService.cs" />
     <Compile Include="Service\BaseService.cs" />
     <Compile Include="Service\HorseService.cs" />
@@ -241,6 +237,10 @@
     <Content Include="Views\MetertoFoot\Delete.cshtml" />
     <Content Include="Views\MetertoFoot\Edit.cshtml" />
     <Content Include="Views\MetertoFoot\Index.cshtml" />
+    <Content Include="Views\GramsToOunce\Create.cshtml" />
+    <Content Include="Views\GramsToOunce\Index.cshtml" />
+    <Content Include="Views\GramsToOunce\Delete.cshtml" />
+    <Content Include="Views\GramsToOunce\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -262,14 +262,8 @@
     <EmbeddedResource Include="Migrations\201803080145292_HorsetoBlock.resx">
       <DependentUpon>201803080145292_HorsetoBlock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803080146443_Base.resx">
-      <DependentUpon>201803080146443_Base.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803080148250_PoundToKilo.resx">
-      <DependentUpon>201803080148250_PoundToKilo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803091630462_MetertoFoot.resx">
-      <DependentUpon>201803091630462_MetertoFoot.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803161603423_GramToOunce.resx">
+      <DependentUpon>201803161603423_GramToOunce.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -286,7 +280,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>54214</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
