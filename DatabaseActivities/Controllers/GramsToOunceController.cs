@@ -1,4 +1,5 @@
-﻿using DatabaseActivities.Service;
+﻿using DatabaseActivities.Models.Entity;
+using DatabaseActivities.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,5 +29,27 @@ namespace DatabaseActivities.Controllers
             service.AddConversion(Grams);
             return RedirectToAction("Index", "GramsToOunce");
         }
-    }
+
+		public ActionResult Delete()
+		{
+			return View();
+		}
+		[HttpPost]
+		public ActionResult DeleteConversion(int Id)
+		{
+			service.DeleteConversion(Id);
+			return RedirectToAction("Index", "GramsToOunce");
+		}
+
+		public ActionResult Edit()
+		{
+			return View();
+		}
+		[HttpPost]
+		public ActionResult EditConversion(int Id, double Grams)
+		{
+			service.SaveEdits(Id, Grams);
+			return RedirectToAction("Index", "GramsToOunce");
+		}
+	}
 }

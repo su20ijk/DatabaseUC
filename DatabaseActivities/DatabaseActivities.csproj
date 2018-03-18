@@ -239,6 +239,8 @@
     <Content Include="Views\MetertoFoot\Index.cshtml" />
     <Content Include="Views\GramsToOunce\Create.cshtml" />
     <Content Include="Views\GramsToOunce\Index.cshtml" />
+    <Content Include="Views\GramsToOunce\Delete.cshtml" />
+    <Content Include="Views\GramsToOunce\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -278,7 +280,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>54214</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

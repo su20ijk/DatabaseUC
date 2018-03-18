@@ -28,5 +28,15 @@ namespace DatabaseActivities.Service
             temp.Gram = inGrams;
             repo.AddConversion(temp);
         }
-    }
+
+		public void DeleteConversion(int Id)
+		{
+			repo.DeleteUnitConversion(Id);
+		}
+
+		public void SaveEdits(int IDX, double Grams)
+		{
+			repo.SaveEdits(IDX, Grams);
+		}
+	}
 }
